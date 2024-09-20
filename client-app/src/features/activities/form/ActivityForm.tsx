@@ -10,9 +10,11 @@ import {v4 as uuid } from 'uuid'
 
 
 
+
 export default observer(function ActivityForm() {
 
 	const { activityStore } = useStore();
+	
 
 	const { createActivity, updateActivity,
 		loading, loadActivity, loadingInitial } = activityStore;
@@ -69,5 +71,6 @@ export default observer(function ActivityForm() {
 				<Button as={Link} to='/activities' floated='right' type='button' content='Cancel' />
 			</Form>
 		</Segment>
+		
 	)
 });
