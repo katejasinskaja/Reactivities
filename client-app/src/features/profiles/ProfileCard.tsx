@@ -1,6 +1,5 @@
 
-
-import { Card, Icon, Image } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 import { Profile } from "../../app/models/profile";
 import { observer } from "mobx-react-lite";
 import { Link } from "react-router-dom";
@@ -26,10 +25,7 @@ export default observer(function ProfileCard({ profile }: Props) {
                     {truncate(profile.bio)}
                 </Card.Description>
             </Card.Content>
-            <Card.Content extra>
-                <Icon name='user' />
-                Followers
-            </Card.Content>
+           
             
         </Card>
     )

@@ -12,9 +12,9 @@ namespace API.Controllers
 
 
         [HttpGet] //api/activities
-        public async Task<IActionResult> GetActivities()
+        public async Task<IActionResult> GetActivities([FromQuery] ActivityParams param)
         {
-            return HandleRequest(await Mediator.Send(new List.Query()));
+            return HandlePagedRequest(await Mediator.Send(new List.Query { Params = param }));
         }
 
         [HttpGet("{id}")] //api/activities/ffdfdf

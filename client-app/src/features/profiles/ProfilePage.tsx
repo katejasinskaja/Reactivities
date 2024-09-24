@@ -4,8 +4,8 @@ import { useParams } from "react-router-dom";
 import { Grid } from "semantic-ui-react";
 import LoadingComponent from "../../app/layout/LoadingComponent";
 import { useStore } from "../../app/stores/store";
-import ProfileContent from "./ProfileContent";
 import ProfileHeader from "./ProfileHeader";
+import ProfilePhotos from "./ProfilePhotos";
 
 export default observer(function ProfilePage() {
     const { username } = useParams<{username: string}>();
@@ -26,7 +26,7 @@ export default observer(function ProfilePage() {
             <Grid.Column width='16'>
                 {profile &&
                     <ProfileHeader profile={profile} />}
-                <ProfileContent profile={profile} />
+                <ProfilePhotos profile={profile} />
             </Grid.Column>
         </Grid>
     )
