@@ -24,7 +24,7 @@ export default observer(function ActivityForm() {
 	
 
 	const { createActivity, updateActivity,
-		loading, loadActivity, loadingInitial } = activityStore;
+		 loadActivity, loadingInitial } = activityStore;
 
 	const { id } = useParams();
 	const navigate = useNavigate();
